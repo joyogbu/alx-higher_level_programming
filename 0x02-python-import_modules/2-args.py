@@ -8,6 +8,8 @@ if __name__ == "__main__":
         ag = ag + 's' + '.'
     if int(length) > 1:
         ag = ag + "s" + ":"
+    if int(length) == 1:
+        ag = ag + ':'
     print("{:d} {}".format(length, ag))
     for arg in range(1, len(sys.argv)):
         if sys.argv[index] == sys.argv[0]:
