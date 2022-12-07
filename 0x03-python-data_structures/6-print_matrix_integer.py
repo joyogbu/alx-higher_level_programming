@@ -14,6 +14,4 @@ def print_matrix_integer(matrix=[[]]):
            else:
                print("{:d}".format(val), end = "")
        #if val != len(matrix) - 1:
-       print()
-    #print("$")
-    #if matrix == []:
+    print()
