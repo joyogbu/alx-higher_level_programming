@@ -11,8 +11,7 @@ def print_matrix_integer(matrix=[[]]):
        for val in row:
            if row.index(val) != (len(matrix) - 1):
                print("{:d}".format(val), end=" ")
-               print()
            else:
                print("{:d}".format(val), end = "")
        #if val != len(matrix) - 1:
-               print()
+       print()
