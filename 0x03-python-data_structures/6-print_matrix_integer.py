@@ -9,5 +9,11 @@ def print_matrix_integer(matrix=[[]]):
     #print(x)
     for row in matrix:
        for val in row:
-           print(row[val], end=" ")
-       print()
+           if row.index(val) != (len(matrix) - 1):
+               print("{:d}".format(val), end=" ")
+           else:
+               print("{:d}".format(val), end = "")
+       #if val != len(matrix) - 1:
+       print("$")
+    #print("$")
+    #if matrix == []:
