@@ -9,5 +9,5 @@ def print_matrix_integer(matrix=[[]]):
     #print(x)
     for row in matrix:
        for val in row:
-           print(val, end=" ")
+           print(row[val], end=" ")
        print()
