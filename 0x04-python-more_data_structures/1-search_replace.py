@@ -15,8 +15,7 @@ def search_replace(my_list, search, replace):
             idx += 1
         if arr == []:
             pass
-        else:
         #print(arr)
-            for v in arr:
-                cop[v] = replace
+        for v in arr:
+            cop[v] = replace
             return(cop)
