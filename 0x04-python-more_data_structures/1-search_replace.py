@@ -14,7 +14,7 @@ def search_replace(my_list, search, replace):
                 arr.append(idx)
             idx += 1
         if arr == []:
-            return
+            pass
         else:
         #print(arr)
             for v in arr:
