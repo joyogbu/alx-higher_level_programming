@@ -3,7 +3,7 @@ def search_replace(my_list, search, replace):
     cop = my_list.copy()
     if search not in my_list:
         pass
-    if my_list == []:
+    if len(cop) == 0:
         return
     arr = []
     idx = 0
