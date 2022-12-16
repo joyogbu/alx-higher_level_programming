@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def search_replace(my_list, search, replace):
+    if my_list = []:
+        pass
     cop = my_list.copy()
     if search not in my_list:
         pass
