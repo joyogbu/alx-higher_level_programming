@@ -6,4 +6,3 @@ def uniq_add(my_list=[]):
             arr.append(elem)
     su = sum(arr)
     return(su)
-
