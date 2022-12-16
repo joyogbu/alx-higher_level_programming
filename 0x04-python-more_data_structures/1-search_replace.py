@@ -4,7 +4,7 @@ def search_replace(my_list, search, replace):
     if search not in my_list:
         pass
     if len(cop) == 0:
-        return
+        pass
     arr = []
     idx = 0
     for idx in range(len(cop)):
