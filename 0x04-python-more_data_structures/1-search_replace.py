@@ -13,8 +13,6 @@ def search_replace(my_list, search, replace):
             if val == search:
                 arr.append(idx)
             idx += 1
-        if arr == []:
-            pass
         #print(arr)
         for v in arr:
             cop[v] = replace
