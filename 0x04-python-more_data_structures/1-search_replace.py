@@ -16,4 +16,4 @@ def search_replace(my_list, search, replace):
         #print(arr)
         for v in arr:
             cop[v] = replace
-            return(cop)
+        return(cop)
