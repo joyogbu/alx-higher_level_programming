@@ -2,11 +2,16 @@
 def search_replace(my_list, search, replace):
     cop = my_list.copy()
     if search not in my_list:
-        return
+        pass
+    arr = []
     idx = 0
-    for idx in cop:
-        if idx == search:
-            ind = cop.index(search)
-            cop[ind] = replace
-            idx = idx + 1
-            return(cop)
+    for idx in range(len(cop)):
+        for val in cop:
+            #for idx, val in enumerate(cop):
+            if val == search:
+                arr.append(idx)
+            idx += 1
+        #print(arr)
+        for v in arr:
+            cop[v] = replace
+        return(cop)
