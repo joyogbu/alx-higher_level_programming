@@ -16,6 +16,7 @@ class Square():
     @property
     def size(self):
         """representing a getter"""
+        return self.__size
     @size.setter
     def size(self, value):
         """representing a setter
@@ -32,6 +33,7 @@ class Square():
     @property
     def position(self):
         """Represent a getter"""
+        return self.__position
     @position.setter
     def position(self, value):
         """representing a position setter
@@ -63,3 +65,8 @@ class Square():
                 for v in range(self.__size):
                     print('#', end="")
                 print()
+
+mysquare = Square(3, (1, 1))
+print(mysquare.size)
+print(mysquare.area())
+print(mysquare.position)
