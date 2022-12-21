@@ -65,8 +65,3 @@ class Square():
                 for v in range(self.__size):
                     print('#', end="")
                 print()
-
-mysquare = Square(3, (1, 1))
-print(mysquare.size)
-print(mysquare.area())
-print(mysquare.position)
