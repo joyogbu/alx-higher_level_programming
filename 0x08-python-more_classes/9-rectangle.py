@@ -89,6 +89,12 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """using static method
+
+        Args:
+        rect_1(Rectangle): firsta class instanve
+        rect_2(Rectangle): second class instance
+        """
         x = rect_1.area()
         y = rect_2.area()
         if not isinstance(rect_1, Rectangle):
@@ -101,4 +107,9 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        return cls(size, size)
+        """generate a new object using classmethod
+
+        Args:
+        size(int): size of the new object
+        """
+        return (cls(size, size))
