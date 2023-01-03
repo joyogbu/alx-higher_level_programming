@@ -112,4 +112,9 @@ class Rectangle:
         Args:
         size(int): size of the new object
         """
-        return (cls(size, size))
+        if size < 0:
+            return
+        elif type(size) is not int:
+            return
+        else:
+            return (cls(size, size))
