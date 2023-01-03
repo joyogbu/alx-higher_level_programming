@@ -97,5 +97,4 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if x >= y:
             return rect_1
-        else:
-            return rect_2
+        return rect_2
