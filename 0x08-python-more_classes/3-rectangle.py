@@ -63,10 +63,11 @@ class Rectangle:
     def __str__(self):
         """converting to string"""
         string = ""
+        if self.__width == 0 or self.__height == 0:
+            return string
         for i in range(self.__height):
             for j in range(self.__width):
                 string += "#"
             if i < self.__height - 1:
                 string += '\n'
         return string
-
