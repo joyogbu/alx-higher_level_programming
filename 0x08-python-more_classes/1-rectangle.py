@@ -41,7 +41,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """set the height
-    
+
         Args:
         value (int): height
         """
@@ -51,4 +51,3 @@ class Rectangle:
             raise ValueError('height must be >= 0')
         else:
             self.__height = value
-
