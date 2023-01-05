@@ -5,13 +5,13 @@
 class MagicClass:
     """representing the magic class"""
 
-    def __init__(self):
+    def __init__(self, radius):
         """initializing themagic class"""
         self.__radius = radius
         if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
-        return None    
-        #self.__radius = None
+        #return None    
+        self.__radius = None
 
     def area(self):
         """defining area"""
