@@ -67,15 +67,13 @@ class Square():
 
     def __str__(self):
         """representing a str metthod for printing square"""
-        if self.__size == 0:
+        for i in range(self.__position[1]):
             print()
-        else:
-            for i in range(self.__position[1]):
-                print()
-            for i in range(self.__size):
-                for j in range(self.__position[0]):
-                    print(" ", end ="")
-                for v in range(self.__size):
-                    print('#', end="")
+        for i in range(self.__size):
+            for j in range(self.__position[0]):
+                print(" ", end ="")
+            for v in range(self.__size):
+                print('#', end="")
+            if i < self.__size - 1:
                 print("")
-            return("")
+        return("")
