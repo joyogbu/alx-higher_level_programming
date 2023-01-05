@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """defing magic class"""
 
-
+import math
 class MagicClass:
     """representing the magic class"""
 
