@@ -5,14 +5,16 @@
 
 def matrix_divided(matrix, div):
     """Representing the function"""
-    
+
     for row in matrix:
         if type(row) is not list:
-            raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+            raise TypeError('matrix must be a matrix \
+                    (list of lists) of integers/floats')
     for row in matrix:
         for item in row:
             if type(item) is not int and type(item) is not float:
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                raise TypeError("matrix must be a matrix \
+                        (list of lists) of integers/floats")
     for row in matrix:
         if len(row) != len(matrix[0]):
             raise TypeError('Each row of the matrix must have the same size')
