@@ -1,0 +1,78 @@
+we try to add two integers together
+
+example:
+add_integer(5, 8)
+
+function returns the sum of two integer
+Args:
+a(int): an integer
+b(int): another integer
+
+Returns:
+sum of the integers
+
+examples
+'importing the module'
+>>> add_integer = __import__('0-add_integer').add_integer
+
+'Two positive numbers'
+>>> add_integer(3, 5)
+8
+
+'Assigning negative numbers works'
+>>> add_integer(4, -6)
+-2
+
+>>> add_integer(-3, -4)
+-7
+
+'it can also work with floating numbers. but they are first casted to integers'
+>>> add_integer(5.3, 4)
+9
+
+>>> add_integer(3.0, 4.0)
+7
+
+'Negative floats'
+>>> add_integer(-3.2, -6.4)
+-9
+
+>>> add_integer(-7.5)
+91
+
+'It will work with only one value as the second value has been harfcoded into thfunction'
+>>> add_integer(6)
+104
+
+'This will not work with strings'
+>>> add_integer(6, "string")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer("string", 4)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer("string")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+'Assigning empty values will not work'
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+>>> add_integer('None')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+'More than 2 arguments will not work'
+>>> add_integer(3, 5, 2)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
