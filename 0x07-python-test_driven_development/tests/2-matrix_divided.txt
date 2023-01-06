@@ -14,25 +14,32 @@ the function returns a new matrix leaving the original matrix unaltered
 'assign non numbers to matrix will not work'
 >>> matrix = [[4, "3"], [8, 3]]
 >>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 'assigning some float'
 >>> matrix = [[3.4, 2.0, 5.4], [3.8, 1, 10.3]]
 >>> print(matrix_divided(matrix, 2))
-[[1.13, 0.67, 1.8], [1.27, 0.33, 3.43]]
+[[1.7, 1.0, 2.7], [1.9, 0.5, 5.15]]
 
 'checking unequal lengths'
 >>> matrix = [[3.4, 2.0], [3, 1, 10]]
+>>> print(matrix_divided(matrix, 2))
+Traceback (most recent call last):
+...
 TypeError: Each row of the matrix must have the same size
 
-'assign an empty matrix will work'
+'assign an empty list of list will work'
 >>> matrix = [[]]
->>> print(matrix_divided(matrix, 2)
+>>> print(matrix_divided(matrix, 2))
 [[]]
 
 'Dividing by empty value'
 >>> matrix = [[1, 2, 3], [4, 5, 6]]
-print(matrix_divided(matrix))
+>>> print(matrix_divided(matrix))
+Traceback (most recent call last):
+...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
 'dividing by zero'
