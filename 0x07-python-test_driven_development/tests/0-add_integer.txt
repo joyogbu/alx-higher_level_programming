@@ -40,6 +40,18 @@ examples
 >>> add_integer(-7.5)
 91
 
+'Large float (infinity)'
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+'not a number NaN'
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
 'It will work with only one value as the second value has been harfcoded into thfunction'
 >>> add_integer(6)
 104
