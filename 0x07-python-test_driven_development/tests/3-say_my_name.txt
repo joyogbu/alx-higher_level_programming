@@ -1,0 +1,35 @@
+Validates and prints the first name and last name of a person
+
+'importing the module'
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+'Values with types string will work'
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+'Only one string value will workbecause the last_name has been hardcoded as an empty stri g into thefunction'
+>>> say_my_name("Bob")
+My name is Bob 
+
+'assigning non-string would yield TypeError'
+>>> say_my_name("John", 10)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(20, "Smith")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+'passing no input will raise 
+>>> say_my_name()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+'assigning more than 3 values will raise a
+>>> say_my_name("John", "smith", "Jasper")
+Traceback (most recent call last):
+...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
