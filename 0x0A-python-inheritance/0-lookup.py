@@ -6,4 +6,4 @@
 def lookup(obj):
     """defining the function
     """
-    return([dir(obj)])
+    return(dir(obj))
