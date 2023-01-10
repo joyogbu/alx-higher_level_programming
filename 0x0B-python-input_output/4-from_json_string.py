@@ -8,5 +8,5 @@ import json
 def from_json_string(my_str):
     """defining the function
     """
-    x = json.load(my_str)
+    x = json.loads(my_str)
     return(x)
