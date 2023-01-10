@@ -14,7 +14,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 try:
     my_list = load_from_json_file(filename)
-except:
+except FileNotFoundError:
     my_list = []
 for arg in range(len(sys.argv[1:])):
     my_list.append(sys.argv[index])
