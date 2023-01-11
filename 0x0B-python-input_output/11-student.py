@@ -19,11 +19,5 @@ class Student:
 
     def reload_from_json(self, json):
         """replace all attributes of the Student instance"""
-        #d = {}
         for i, v in json.items():
-            #d[i] = v
-            #d[i] = v
             self.__dict__ = json
-        #print("hd is {}".format(d))
-            #return(d)
-        
