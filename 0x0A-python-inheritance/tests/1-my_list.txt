@@ -1,1 +1,26 @@
+a myList class that inherits from list
+
+'instantiating'
+>>> MyList = __import__('1-my_list').MyList
+
+'test examples'
+>>> my_list = MyList()
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> print(my_list)
+[4, 2]
+>>> my_list.print_sorted()
+[2, 4]
+
+'appending negative numbers'
+>>> my_list = MyList()
+>>> my_list.append(-6)
+>>> my_list.print_sorted()
+[-6]
+
+'printing an empty list'
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
 
