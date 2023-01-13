@@ -7,6 +7,8 @@ documentation on how to use the BaseGeometry class
 
 'testing area() method'
 >>> bg.area()
+Traceback (most recent call last):
+...
 Exception: area() is not implemented
 
 'testing with 0'
@@ -25,17 +27,17 @@ TypeError: name must be an integer
 >>> bg.integer_validator()
 Traceback (most recent call last):
 ...
-TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 'testing with one argument'
 >>> bg.integer_validator("name")
 Traceback (most recent call last):
 ...
-TypeError: integer_validator() missing 1 required positional argument: 'value
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 'testing with negative value'
 >>> bg.integer_validator("name", -4)
 Traceback (most recent call last):
 ...
-name must be greater than 0
+ValueError: name must be greater than 0
 
