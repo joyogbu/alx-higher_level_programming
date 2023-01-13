@@ -41,3 +41,26 @@ Traceback (most recent call last):
 ...
 ValueError: name must be greater than 0
 
+'testing with a 'None' value'
+>>> bg.integer_validator("name", None)
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+'testing with a 'list' value'
+>>> bg.integer_validator("name", [8, 5])
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+'testing with a 'tuple' value'
+>>> bg.integer_validator("name", (5, ))
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+'testing with a 'dict' value'
+>>> bg.integer_validator("name", {7,4})
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
