@@ -1,0 +1,1 @@
+'replace '.', '?' and ':' in a string'
