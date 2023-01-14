@@ -9,7 +9,8 @@ class MyInt(int):
             #return False
         #else:
             #return True
-        return not bool
+        if x:
+            return not bool
         #flag = not flag
         #issubclass(self, int)
     #def ___eq__(self, value):
