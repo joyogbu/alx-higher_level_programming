@@ -4,17 +4,8 @@
 
 class MyInt(int):
     """representing the class"""
-    def rebel(self):
-        #if True:
-            #return False
-        #else:
-            #return True
-        if x:
-            return not bool
-        #flag = not flag
-        #issubclass(self, int)
-    #def ___eq__(self, value):
-        #return (int(self) != value)
-    #def __ne__(self, value):
-        #return (int(self) == value)
+    def __eq__(self, num):
+        return (int(self) != num)
+    def __ne__(self, num):
+        return (int(self) == num)
 
