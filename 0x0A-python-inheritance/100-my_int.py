@@ -8,4 +8,3 @@ class MyInt(int):
         return (int(self) != num)
     def __ne__(self, num):
         return (int(self) == num)
-
