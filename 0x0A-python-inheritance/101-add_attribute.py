@@ -3,4 +3,5 @@
 
 
 def add_attribute(obj, name, value):
+    """defining the function"""
     setattr(obj, name, value)
