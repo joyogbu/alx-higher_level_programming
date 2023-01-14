@@ -12,16 +12,14 @@ class Rectangle(BaseGeometry):
         """instantiating the class"""
         #self.__width = width
         #self.__height = height
-        BaseGeometry.__init__(self)
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        #super().area()
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
-    
-        def area(self):
-            return self.__width * self.__height
 
-        def __str__(self):
-            return "[" + str(self.__class__.__name__) + "]" + " " + str(self.__width) + "/" + str(self.__height)
+    def area(self):
+        return self.__width * self.__height
 
-        #def __print__(s
+    def __str__(self):
+        return "[" + str(self.__class__.__name__) + "]" + " " + str(self.__width) + "/" + str(self.__height)
