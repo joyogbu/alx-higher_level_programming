@@ -56,12 +56,14 @@ class TestRectangleArea(unittest.TestCase):
         self.assertTrue(r2.area() == 15)
 
     def test_area3(self):
-        with self.assertRaisesRegexp(ValueError, 'height must be > 0'):
+        with self.assertRaisesRegex(ValueError, 'height must be > 0'):
             Rectangle(3, -1).area()
 
     def test_area4(self):
-        with self.assertRaises(TypeError):
+        with self.assertRaises(TypeError) as er:
             Rectangle().area()
+        self.assertEqual(str(er.exception), "__init__() missing 2 required positional arguments: 'width' and 'height'")
+
 
 if __name__ == '__main__':
     unittest.main()

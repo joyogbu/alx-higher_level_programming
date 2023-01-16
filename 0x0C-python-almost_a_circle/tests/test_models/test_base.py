@@ -46,7 +46,6 @@ class TestBase(unittest.TestCase):
     def test_id8(self):
         with self.assertRaises(TypeError) as er:
             r4 = Rectangle()
-        print(str(er.exception))
         self.assertEqual(str(er.exception), "__init__() missing 2 "
                                             "required positional arguments: "
                                             "'width' and 'height'")
