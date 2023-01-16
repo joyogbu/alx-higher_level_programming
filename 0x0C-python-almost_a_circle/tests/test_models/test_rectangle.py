@@ -55,6 +55,13 @@ class TestRectangleArea(unittest.TestCase):
         r2 = Rectangle(3, 5, 0, 0, 7)
         self.assertTrue(r2.area() == 15)
 
+    def test_area3(self):
+        with self.assertRaisesRegexp(ValueError, 'height must be > 0'):
+            Rectangle(3, -1).area()
+
+    def test_area4(self):
+        with self.assertRaises(TypeError):
+            Rectangle().area()
 
 if __name__ == '__main__':
     unittest.main()
