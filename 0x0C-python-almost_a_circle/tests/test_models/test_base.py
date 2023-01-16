@@ -2,14 +2,15 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class TestBase(unittest.TestCase):
-    #def setUp(self):
-        #self.b1 = Base()
-        
+    """test base class"""
+
     def test_id(self):
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
+
     def test_public_id(self):
         b3 = Base()
         b3.id = 10
@@ -20,7 +21,7 @@ class TestBase(unittest.TestCase):
         b1 = Base()
         b2 = Base(12)
         b3 = Base()
-        self.assertEqual(b1.id, b3.id- 1)
+        self.assertEqual(b1.id, b3.id - 1)
 
     def test_id3(self):
         self.assertEqual(Base(15).id, 15)
@@ -46,6 +47,10 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError) as er:
             r4 = Rectangle()
         print(str(er.exception))
-        self.assertEqual(str(er.exception), "__init__() missing 2 required positional arguments: 'width' and 'height'")
+        self.assertEqual(str(er.exception), "__init__() missing 2 "
+                                            "required positional arguments: "
+                                            "'width' and 'height'")
+
+
 if __name__ == '__main__':
     unittest.main()
