@@ -2,13 +2,14 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 
+
 class TestRectangle(unittest.TestCase):
     """run tests for private instance attribute of rectangle
     """
+
     def test_instance_attr1(self):
         with self.assertRaises(TypeError):
             r1 = Rectangle(10, "2")
-            #self.assertEqual(str(er.exception), 'height must be an integer')
 
     def test_instance_attr2(self):
         with self.assertRaises(ValueError) as er:
@@ -26,6 +27,7 @@ class TestRectangle(unittest.TestCase):
     def test_instance_attr4(self):
         with self.assertRaisesRegex(TypeError, 'x must be an integer'):
             r4 = Rectangle(3, 4, 2.3)
+
     def test_instance_attr5(self):
         with self.assertRaisesRegex(TypeError, 'width must be an integer'):
             r4 = Rectangle({5}, 3)
@@ -35,6 +37,13 @@ class TestRectangle(unittest.TestCase):
 
     def test_instance_attr7(self):
         self.assertEqual(Rectangle(2, 1, 6, 4, 2).x, 6)
+
+    def test_instance_attr8(self):
+        self.assertTrue(Rectangle(2, 4).width == 2)
+
+    def test_instance_attr9(self):
+        self.assertEqual(Rectangle(2, 4, 0, 0).y, 0)
+
 
 if __name__ == '__main__':
     unittest.main()
