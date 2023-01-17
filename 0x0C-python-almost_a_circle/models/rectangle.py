@@ -81,11 +81,18 @@ class Rectangle(Base):
         """defining display to print rectangle
         """
         string = "#"
+        for k in range(self.__y):
+            print()
         for i in range(self.__height):
+            for x in range(self.__x):
+                print(" ", end="")
             for j in range(self.__width):
                 print(string, end="")
             print()
 
     def __str__(self):
-        string = "[" + self.__class__.__name__ + "]" + " (" + str(self.id) + ") " + str(self.__x) + "/" + str(self.__y) + " - " + str(self.__width) + "/" + str(self.__height)
+        string = "[" + self.__class__.__name__ + "]" + " (" + \
+                str(self.id) + ") " + str(self.__x) + "/" + \
+                str(self.__y) + " - " + str(self.__width) + "/" + \
+                str(self.__height)
         return (string)
