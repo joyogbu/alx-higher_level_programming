@@ -24,24 +24,24 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'x must be >= 0'):
             r4 = Rectangle(3, 2, -1, 0)
 
-    def test_instance_attr4(self):
+    def test_instance_attr5(self):
         with self.assertRaisesRegex(TypeError, 'x must be an integer'):
             r4 = Rectangle(3, 4, 2.3)
 
-    def test_instance_attr5(self):
+    def test_instance_attr6(self):
         with self.assertRaisesRegex(TypeError, 'width must be an integer'):
             r4 = Rectangle({5}, 3)
 
-    def test_instance_attr6(self):
+    def test_instance_attr7(self):
         self.assertEqual(Rectangle(3, 4).height, 4)
 
-    def test_instance_attr7(self):
+    def test_instance_attr8(self):
         self.assertEqual(Rectangle(2, 1, 6, 4, 2).x, 6)
 
-    def test_instance_attr8(self):
+    def test_instance_attr9(self):
         self.assertTrue(Rectangle(2, 4).width == 2)
 
-    def test_instance_attr9(self):
+    def test_instance_attr10(self):
         self.assertEqual(Rectangle(2, 4, 0, 0).y, 0)
 
 
@@ -63,6 +63,31 @@ class TestRectangleArea(unittest.TestCase):
         with self.assertRaises(TypeError) as er:
             Rectangle().area()
         self.assertEqual(str(er.exception), "__init__() missing 2 required positional arguments: 'width' and 'height'")
+
+
+class TestRectangleStr(unittest.TestCase):
+    
+    def test_str1(self):
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(r1.__str__(), '[Rectangle] (12) 2/1 - 4/6')
+
+    def test_str2(self):
+        r2 = Rectangle(5, 5, 1)
+        self.assertEqual(r2.__str__(), '[Rectangle] (13) 1/0 - 5/5')
+
+    def test_str3(self):
+        with self.assertRaises(TypeError):
+            r3 = Rectangle()
+            print(r3)
+
+    def test_str4(self):
+        with self.assertRaisesRegex(TypeError, 'height must be an integer'):
+            print(Rectangle(3, "3", 0, 0))
+
+    def test_str5(self):
+        with self.assertRaisesRegex(ValueError, 'x must be >= 0'):
+            print(Rectangle(2, 4, -1))
+    
 
 
 if __name__ == '__main__':

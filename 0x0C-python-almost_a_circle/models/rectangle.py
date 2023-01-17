@@ -15,7 +15,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        Base.__init__(self, id)
+        super().__init__(id)
 
     @property
     def width(self):
@@ -85,3 +85,7 @@ class Rectangle(Base):
             for j in range(self.__width):
                 print(string, end="")
             print()
+
+    def __str__(self):
+        string = "[" + self.__class__.__name__ + "]" + " (" + str(self.id) + ") " + str(self.__x) + "/" + str(self.__y) + " - " + str(self.__width) + "/" + str(self.__height)
+        return (string)
