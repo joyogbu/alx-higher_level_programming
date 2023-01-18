@@ -96,3 +96,17 @@ class Rectangle(Base):
                 str(self.__y) + " - " + str(self.__width) + "/" + \
                 str(self.__height)
         return (string)
+
+    def update(self, *args):
+        #if arg
+        for i, arg in enumerate(args):
+            if i == 0:
+                self.id = arg
+            elif i == 1:
+                self.width = arg
+            elif i == 2:
+                self.height = arg
+            elif i == 3:
+                self.x = arg
+            else:
+                self.y = arg
