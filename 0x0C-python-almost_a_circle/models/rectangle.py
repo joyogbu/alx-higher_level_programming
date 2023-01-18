@@ -91,6 +91,7 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """string representation of the rectangle object"""
         string = "[" + self.__class__.__name__ + "]" + " (" + \
                 str(self.id) + ") " + str(self.__x) + "/" + \
                 str(self.__y) + " - " + str(self.__width) + "/" + \
@@ -98,7 +99,7 @@ class Rectangle(Base):
         return (string)
 
     def update(self, *args):
-        #if arg
+        """updating the rectangle object"""
         for i, arg in enumerate(args):
             if i == 0:
                 self.id = arg
