@@ -90,19 +90,32 @@ class Rectangle(Base):
                 print(string, end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updating the rectangle object"""
-        for i, arg in enumerate(args):
-            if i == 0:
-                self.id = arg
-            elif i == 1:
-                self.width = arg
-            elif i == 2:
-                self.height = arg
-            elif i == 3:
-                self.x = arg
-            else:
-                self.y = arg
+        if args:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.width = arg
+                elif i == 2:
+                    self.height = arg
+                elif i == 3:
+                    self.x = arg
+                else:
+                    self.y = arg
+        if kwargs:
+            for k, v in kwargs.items():
+                if k == 'id':
+                    self.id = v
+                elif k == 'width':
+                    self.width = v
+                elif k == 'height':
+                    self.height = v
+                elif k == 'x':
+                    self.x = v
+                elif k == 'y':
+                    self.y = v
 
     def __str__(self):
         """string representation of the rectangle object"""
