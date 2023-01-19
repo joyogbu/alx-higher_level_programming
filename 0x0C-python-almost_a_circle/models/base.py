@@ -34,7 +34,7 @@ class Base:
         _list = []
         with open(file_name, 'w', encoding="utf-8") as f:
             if list_objs is None:
-                f.write(emp_list)
+                f.write(_list)
             else:
                 for i in list_objs:
                     _list.append(cls.to_dictionary(i))
