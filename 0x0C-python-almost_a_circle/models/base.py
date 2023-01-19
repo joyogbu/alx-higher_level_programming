@@ -68,4 +68,7 @@ class Base:
             return (_list)
         else:
             with open(file_name, encoding="utf-8") as f:
-                return json.loads(f.read())
+                x = cls.from_json_string(f.read())
+                for i in x:
+                    _list.append(cls.create(**i))
+                    return (_list)
