@@ -34,9 +34,8 @@ class Base:
         _list = []
         with open(file_name, 'w', encoding="utf-8") as f:
             if list_objs is None:
-                f.write(_list)
+                f.write("[]")
             else:
                 for i in list_objs:
                     _list.append(cls.to_dictionary(i))
                 f.write(cls.to_json_string(_list))
-                #f.write(json.dumps(emp_list))
