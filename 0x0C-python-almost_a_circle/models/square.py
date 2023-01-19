@@ -46,6 +46,11 @@ class Square(Rectangle):
                 else:
                     self.y = v
 
+    def to_dictionary(self):
+        """return the dictionary representation of the Square class
+        """
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
+
     def __str__(self):
         """string representation of the rectangle object"""
         string = "[" + self.__class__.__name__ + "]" + " (" + \
