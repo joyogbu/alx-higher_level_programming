@@ -39,3 +39,13 @@ class Base:
                 for i in list_objs:
                     _list.append(cls.to_dictionary(i))
                 f.write(cls.to_json_string(_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of JSON string representation
+        """
+        x = []
+        if json_string is None or json_string == []:
+            return(x)
+        else:
+            return json.loads(json_string)
