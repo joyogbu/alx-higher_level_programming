@@ -90,14 +90,6 @@ class Rectangle(Base):
                 print(string, end="")
             print()
 
-    def __str__(self):
-        """string representation of the rectangle object"""
-        string = "[" + self.__class__.__name__ + "]" + " (" + \
-                str(self.id) + ") " + str(self.__x) + "/" + \
-                str(self.__y) + " - " + str(self.__width) + "/" + \
-                str(self.__height)
-        return (string)
-
     def update(self, *args):
         """updating the rectangle object"""
         for i, arg in enumerate(args):
@@ -111,3 +103,11 @@ class Rectangle(Base):
                 self.x = arg
             else:
                 self.y = arg
+
+    def __str__(self):
+        """string representation of the rectangle object"""
+        string = "[" + self.__class__.__name__ + "]" + " (" + \
+            str(self.id) + ") " + str(self.__x) + "/" + \
+            str(self.__y) + " - " + str(self.__width) + "/" + \
+            str(self.__height)
+        return (string)
