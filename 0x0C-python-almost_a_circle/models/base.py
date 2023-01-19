@@ -61,6 +61,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """load from file"""
         file_name = cls.__name__ + ".json"
         _list = []
         if file_name is None:
