@@ -47,6 +47,7 @@ class TestRectangle(unittest.TestCase):
 
 class TestRectangleArea(unittest.TestCase):
 
+    """testing normal values"""
     def test_area1(self):
         r1 = Rectangle(2, 3)
         self.assertEqual(r1.area(), 6)
@@ -55,14 +56,36 @@ class TestRectangleArea(unittest.TestCase):
         r2 = Rectangle(3, 5, 0, 0, 7)
         self.assertTrue(r2.area() == 15)
 
+    """testing with a negative height will give valueerror"""
     def test_area3(self):
         with self.assertRaisesRegex(ValueError, 'height must be > 0'):
             Rectangle(3, -1).area()
 
+    """testing with empty values"""
     def test_area4(self):
         with self.assertRaises(TypeError) as er:
             Rectangle().area()
         self.assertEqual(str(er.exception), "__init__() missing 2 required positional arguments: 'width' and 'height'")
+
+    """testing with 0 width"""
+    def test_area5(self):
+        with self.assertRaisesRegex(ValueError, 'width must be > 0'):
+            Rectangle(0, 2).area()
+
+    """testing with string value will return a Typeerror"""
+    def test_area_string(self):
+        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+            Rectangle("3", 2).area()
+
+    """testing with float will give TypeError"""
+    def test_area_float(self):
+        with self.assertRaisesRegex(TypeError, 'height must be an integer'):
+            Rectangle(2, 4.2).area()
+
+    """testing with dictionary values"""
+    def test_area_dict(self):
+        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
+            Rectangle({3, 2}, 4).area()
 
 
 class TestRectangleStr(unittest.TestCase):
