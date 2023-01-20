@@ -35,18 +35,21 @@ class TestRectangle(unittest.TestCase):
 
     """testing with a 0 width will raise valueerror"""
     def test_instance_0width(self):
-        with self.assertRaisesRegex(ValueError, 'width must be > 0'):
-            r_0 = Rectangle(0, 3)
+        with self.assertRaises(ValueError) as er:
+            Rectangle(0, 3).id
+        self.assertEqual(str(er.exception), 'width must be > 0')
 
     """testing with a 0 height will raise valueerror"""
-    def teat_instance_0height(self):
-        with self.assertRaisesRegex(ValueError, 'height must be > 0'):
-            r_h = Rectangle(2, 0)
+    def test_instance_0height(self):
+        with self.assertRaises(ValueError) as er:
+            Rectangle(2, 0).id
+        self.assertEqual(str(er.exception), 'height must be > 0')
 
     """testing with a dictionary value for width will raise Typeerror"""
     def test_instance_attr6(self):
-        with self.assertRaisesRegex(TypeError, 'width must be an integer'):
-            r4 = Rectangle({5}, 3)
+        with self.assertRaises(TypeError) as er:
+            r4 = Rectangle({5}, 3).id
+        self.assertEqual(str(er.exception), 'width must be an integer')
 
     """testing with normal values"""
     def test_instance_attr7(self):
