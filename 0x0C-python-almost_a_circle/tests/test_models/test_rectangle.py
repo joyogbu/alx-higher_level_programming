@@ -7,31 +7,48 @@ class TestRectangle(unittest.TestCase):
     """run tests for private instance attribute of rectangle
     """
 
+    """testing with string value will raise Typeerror"""
     def test_instance_attr1(self):
         with self.assertRaises(TypeError):
             r1 = Rectangle(10, "2")
 
+    """testing with a negative width will raise a valueerror"""
     def test_instance_attr2(self):
         with self.assertRaises(ValueError) as er:
             r2 = Rectangle(-5, 4)
         self.assertEqual(str(er.exception), 'width must be > 0')
 
+    """testing with a negative 'y' value will raise Valueerror"""
     def test_instance_attr3(self):
         with self.assertRaisesRegex(ValueError, 'y must be >= 0'):
             r3 = Rectangle(4, 3, 2, -1)
 
+    """testing with a negative 'x' value will give Valueerror"""
     def test_instance_attr4(self):
         with self.assertRaisesRegex(ValueError, 'x must be >= 0'):
             r4 = Rectangle(3, 2, -1, 0)
 
+    """testing with a float will raise typerror"""
     def test_instance_attr5(self):
         with self.assertRaisesRegex(TypeError, 'x must be an integer'):
             r4 = Rectangle(3, 4, 2.3)
 
+    """testing with a 0 width will raise valueerror"""
+    def test_instance_0width(self):
+        with self.assertRaisesRegex(ValueError, 'width must be > 0'):
+            r_0 = Rectangle(0, 3)
+
+    """testing with a 0 height will raise valueerror"""
+    def teat_instance_0height(self):
+        with self.assertRaisesRegex(ValueError, 'height must be > 0'):
+            r_h = Rectangle(2, 0)
+
+    """testing with a dictionary value for width will raise Typeerror"""
     def test_instance_attr6(self):
         with self.assertRaisesRegex(TypeError, 'width must be an integer'):
             r4 = Rectangle({5}, 3)
 
+    """testing with normal values"""
     def test_instance_attr7(self):
         self.assertEqual(Rectangle(3, 4).height, 4)
 
