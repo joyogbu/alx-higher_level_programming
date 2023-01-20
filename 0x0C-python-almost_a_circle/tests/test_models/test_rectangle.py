@@ -45,6 +45,11 @@ class TestRectangle(unittest.TestCase):
             Rectangle(2, 0).id
         self.assertEqual(str(er.exception), 'height must be > 0')
 
+    """testing with string id"""
+    def test_instance_stringid(self):
+        with self.assertRaises(TypeError):
+            Rectangle(3, 4, 0, "8")
+
     """testing with a dictionary value for width will raise Typeerror"""
     def test_instance_attr6(self):
         with self.assertRaises(TypeError) as er:
