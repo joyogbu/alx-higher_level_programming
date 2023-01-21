@@ -14,12 +14,13 @@ is it?
 >>> text_indentation(5)
 Traceback (most recent call last):
 ...
-TypeError: text must be a string
-
+TypeError: test must be a string
 >>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-
->>> text_indentation(.?:)
+>>> text_indentation('.?:')
 .
 <BLANKLINE>
 ?
@@ -27,7 +28,7 @@ TypeError: text must be a string
 :
 <BLANKLINE>
 
->>> twxt_indentation(6.37)
-Traceback (mosr recent call last):
+>>> text_indentation(6.37)
+Traceback (most recent call last):
 ...
 TypeError: test must be a string
