@@ -1,1 +1,33 @@
 'replace '.', '?' and ':' in a string'
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("this is: a string. is it?")
+this is:
+<BLANKLINE>
+a string.
+<BLANKLINE>
+is it?
+<BLANKLINE>
+
+'testing with integer'
+>>> text_indentation(5)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation()
+
+
+>>> text_indentation(.?:)
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+>>> twxt_indentation(6.37)
+Traceback (mosr recent call last):
+...
+TypeError: test must be a string
