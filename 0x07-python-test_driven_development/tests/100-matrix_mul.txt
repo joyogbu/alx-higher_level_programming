@@ -1,0 +1,75 @@
+'module multiplies two matrices of equal rows containing only integers or floats'
+
+'importing the module'
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+'multiplying normal values'
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+>>> print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+[[13, 16]]
+'testing with float values'
+>>> print(matrix_mul([[3.2, 3.6]], [[4, 8.3], [5, 1]]
+
+'testing with negative values'
+>>> print(matrix_mul([[1, -6, 2], [3, -2, 0], [2, 8, 2]], [[3, 4], [5, 6], [2, 0]]))
+[[-23, -32], [-1, 0], [50, 56]]
+
+'testing with empty values in matrix a will produce a valueerror'
+>>> print(matrix_mul([[], [3, -2, 0], [2, 8, 2]], [[3, 4], [5, 6], [2, 0]]))
+Traceback (most recent call last):
+...
+TypeError: each row of m_a must be of the same size
+
+'testing with empty list in matrix b will also produce value error'
+>>> print(matrix_mul([[3, 2], [7, 1]], [[]]))
+Traceback (most recent call last):
+...
+ValueError: m_b can't be empty
+
+'testing with empty lists in both matrices will produce value error'
+>>> print(matrix_mul([[]], [[]]))
+Traceback (most recent call last):
+...
+ValueError: m_a can't be empty
+
+'testing with tuple will raise TypeError'
+>>> print(matrix_mul([(3, 2), (1, 0)], [[4, 5], [1, 9]]))
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list of lists
+
+'testing with dictionary value will also raise Typeerror'
+>>> print(matrix_mul([[3, 6]], [{5, 8}, [4,1]]))
+Traceback (most recent call last):
+...
+TypeError: m_b must be a list of lists
+
+'testing with string will produce Typeeeror'
+>>> print(matrix_mul([[4, "1"]], [[3, 4], [1, "3"]]))
+Traceback (most recent call last):
+...
+TypeError: m_b should contain only integers or floats
+
+'testing matrix that is not a rectangle(whose row length are equal) will raise a Typeerror'
+>>> print(matrix_mul([[1, 6, 2], [3, 2], [2, 7.8, 2]], [[3, 4], [5, 6], [2, 0]]))
+Traceback (most recent call last):
+...
+TypeError: each row of m_a must be of the same size
+
+>>> print(matrix_mul([[3, 5, 3], [3, 4, 4]], [[3, 6], [4], [4, 1]]))
+Traceback (most recent call last):
+...
+TypeError: each row of m_b must be of the same size
+
+'testing invalid matrices. m_a row != m_b col'
+>>> print(matrix_mul([[1, 6, 2], [3, 2, 3], [2, 7.8, 2]], [[3, 4], [5, 6]]))
+Traceback (most recent call last):
+...
+ValueError: m_a and m_b can't be multiplied
+
+'testing with empty values'
+>>> print(matrix_mul())
+Traceback (most recent call last):
+...
+TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
