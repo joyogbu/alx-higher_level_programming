@@ -1,2 +1,2 @@
 -- select record and count by score
-SELECT COUNT(DISTINCT(score)) ORDER BY score ASC
+SELECT COUNT score GROUP BY score ORDER BY score ASC
