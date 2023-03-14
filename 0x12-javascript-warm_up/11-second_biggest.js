@@ -6,6 +6,6 @@ if (arg.length === 0 || arg.length === 1) {
 } else {
   x = Math.max.apply(null, arg);
   arg.splice(arg.indexOf(x), 1);
-  x = Number(Math.max.apply(null, arg));
+  x = Math.max.apply(null, arg);
 }
 console.log(x);
