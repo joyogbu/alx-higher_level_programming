@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const arg =  process.argv;
+const arg = process.argv;
 let myStr = '';
 let i;
 let j;
@@ -9,13 +9,11 @@ if (Number.isInteger(arg1)) {
     for (j = 0; j < arg1; j++) {
       myStr += 'X';
     }
-    if (i < arg1) {
-      //console.log('\n');
+    if (i <= arg1) {
       myStr += '\n';
     }
- }
+  }
   console.log(myStr);
-//}
 } else {
   console.log('Missing size');
 }
