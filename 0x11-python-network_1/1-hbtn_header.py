@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """srnd a URL request and display the X-Request-Id data"""
 
 
