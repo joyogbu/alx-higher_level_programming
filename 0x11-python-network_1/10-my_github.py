@@ -9,5 +9,10 @@ import requests
 if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
-    req = requests.get('https://api.github.com/user', auth=(username, password))
-    print(req.json()['id'])
+    req = requests.get('https://api.github.com/user',
+                       auth=(username, password))
+    try:
+        out = req.json()
+        print(out['id'])
+    except ValueError:
+        print(None)
