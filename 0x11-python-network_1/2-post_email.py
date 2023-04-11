@@ -10,7 +10,7 @@ import sys
 if __name__ == "__main__":
     url = sys.argv[1]
     em = sys.argv[2]
-    value = {"Your email is": em}
+    value = {"email": em}
     data = urllib.parse.urlencode(value)
     data = data.encode('ascii')
     req = urllib.request.Request(url, data)
