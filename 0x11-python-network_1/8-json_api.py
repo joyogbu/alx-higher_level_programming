@@ -13,8 +13,11 @@ if __name__ == "__main__":
         val = sys.argv[1]
     payload = {'q': val}
     req = requests.post('http://0.0.0.0:5000/search_user', data=payload)
-    if req.json():
-        print("[{}] {}".format(req.json()['id'], req.json()['name']))
-    else:
-        print("No result")
-        print(req.status_code)
+    try:
+        out = req.json()
+        if len(out) == 0:
+            print("No result")
+        else:
+            print("[{}] {}".format(req.json()['id'], req.json()['name']))
+    except:
+        print("Not a valid JSON")
