@@ -4,7 +4,6 @@
 
 import sys
 import requests
-import requests.exceptions
 
 
 if __name__ == "__main__":
@@ -20,5 +19,5 @@ if __name__ == "__main__":
             print("No result")
         else:
             print("[{}] {}".format(req.json()['id'], req.json()['name']))
-    except JSONDecodeError:
+    except ValueError:
         print("Not a valid JSON")
