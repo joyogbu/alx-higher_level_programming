@@ -14,5 +14,5 @@ if __name__ == "__main__":
     try:
         out = req.json()
         print(out['id'])
-    except ValueError:
+    except KeyError:
         print(None)
