@@ -17,8 +17,6 @@ if __name__ == "__main__":
                            format(args[1], args[2], args[3]))
     DBSession = sessionmaker(bind=engine)
     db_session = DBSession()
-    all_states = db_session.query(State).first()
-    if all_states is None:
-        print("Nothing")
-    else:
-        print("{}: {}".format(all_states.id, all_states.name))
+    all_states = db_session.query(State).filter(State.name.contains("a"))
+    for state in all_states:
+        print("{}: {}".format(state.id, state.name))
