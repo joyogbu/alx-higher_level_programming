@@ -14,8 +14,7 @@ args = sys.argv
 if __name__ == "__main__":
     '''connect and query the database'''
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}".
-                            format(args[1],
-args[2], args[3]))
+                           format(args[1], args[2], args[3]))
     DBSession = sessionmaker(bind=engine)
     db_session = DBSession()
     all_states = db_session.query(State).order_by(State.id)
