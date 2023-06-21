@@ -17,4 +17,4 @@ if __name__ == "__main__":
                 ORDER BY `c`.`id`")
     # [print(city) for city in c.fetchall()]
     for city in c.fetchall():
-        print("{}".format(city)
+        print("{}".format(city))
