@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-'''Write a script that lists all State objects from hbtn_0e_6_usa'''
-
+"""add new record to the states table"""
 
 import sys
 import sqlalchemy
@@ -17,8 +16,7 @@ if __name__ == "__main__":
                            format(args[1], args[2], args[3]))
     DBSession = sessionmaker(bind=engine)
     db_session = DBSession()
-    all_states = db_session.query(State).filter_by(name=args[4]).first()
-    if all_states is None:
-        print("Not found")
-    else:
-        print("{}".format(all_states.id))
+    new_state = State(name="Louisiana")
+    db_session.add(new_state)
+    db_session.commit()
+    print("{}".format(new_state.id))
