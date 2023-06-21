@@ -2,7 +2,7 @@
 '''Displays all cities of a given state from the'''
 '''states table of the database hbtn_0e_4_usa.import sys'''
 
-
+import sys
 import MySQLdb
 
 
